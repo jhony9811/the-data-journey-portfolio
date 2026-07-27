@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (loaderPercentage) {
-            loaderPercentage.textContent = "100%";
+           loaderPercentage.textContent = "100"
         }
 
         if (loaderMessage) {
