@@ -1211,3 +1211,216 @@ button {
         transition-duration: 0.01ms !important;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================================
+   MISSION CONTROL LOADING SCREEN
+========================================================= */
+
+body.loading {
+    overflow: hidden;
+}
+
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 217, 255, 0.12),
+            transparent 38%
+        ),
+        #010712;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.25;
+    background-image:
+        linear-gradient(
+            rgba(0, 217, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 217, 255, 0.08) 1px,
+            transparent 1px
+        );
+    background-size: 54px 54px;
+    animation: loaderGridMove 8s linear infinite;
+    mask-image:
+        radial-gradient(circle at center, black, transparent 78%);
+}
+
+.loader-content {
+    position: relative;
+    z-index: 2;
+    width: min(calc(100% - 40px), 620px);
+    text-align: center;
+}
+
+.loader-logo {
+    position: relative;
+    display: grid;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 30px;
+    place-items: center;
+}
+
+.loader-ring {
+    position: absolute;
+    border: 1px solid var(--cyan);
+    border-radius: 50%;
+}
+
+.loader-ring-one {
+    inset: 0;
+    border-style: dashed;
+    animation: loaderSpin 7s linear infinite;
+}
+
+.loader-ring-two {
+    inset: 19px;
+    opacity: 0.65;
+    animation: loaderSpinReverse 5s linear infinite;
+}
+
+.loader-logo strong {
+    display: grid;
+    width: 62px;
+    height: 62px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--cyan);
+    font-size: 1.9rem;
+    box-shadow:
+        0 0 30px rgba(0, 217, 255, 0.35),
+        inset 0 0 20px rgba(0, 217, 255, 0.08);
+}
+
+.loader-system {
+    margin-bottom: 12px;
+    color: var(--cyan);
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.loader-content h1 {
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+}
+
+.loader-message {
+    min-height: 30px;
+    color: var(--muted);
+    font-family: monospace;
+    font-size: 0.86rem;
+    transition: opacity 0.2s ease;
+}
+
+.loader-progress {
+    height: 5px;
+    margin-top: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 217, 255, 0.25);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.loader-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background:
+        linear-gradient(90deg, var(--blue), var(--cyan));
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.6);
+    transition: width 0.15s linear;
+}
+
+.loader-percentage {
+    margin-top: 12px;
+    color: var(--cyan);
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.loader-status {
+    margin-top: 25px;
+    color: rgba(145, 167, 184, 0.7);
+    font-family: monospace;
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+@keyframes loaderSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderSpinReverse {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes loaderGridMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(54px);
+    }
+}
+
+@media (max-width: 600px) {
+    .loader-logo {
+        width: 105px;
+        height: 105px;
+    }
+
+    .loader-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .loader-message {
+        font-size: 0.76rem;
+    }
+}
