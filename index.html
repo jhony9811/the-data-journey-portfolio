@@ -1,180 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Data Journey — Data Analytics Portfolio" />
-  <title>The Data Journey | Data Analytics Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="The Data Journey — Data Analytics portfolio by Jhony Alexander Meza Garzón."
+    >
+
+    <title>The Data Journey | Data Analytics Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="hero" id="home">
-    <div class="hero-overlay"></div>
 
-    <nav class="navbar container" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="The Data Journey home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" role="img">
-            <circle cx="32" cy="32" r="25"></circle>
-            <path d="M17 39V29M25 43V21M33 39V26M41 45V18M49 36V25"></path>
-          </svg>
-        </span>
-        <span class="brand-text"><small>THE</small><strong>DATA</strong><b>JOURNEY</b></span>
-      </a>
+    <!-- Decorative background -->
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="background-glow glow-one" aria-hidden="true"></div>
+    <div class="background-glow glow-two" aria-hidden="true"></div>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
+    <!-- Navigation -->
+    <header class="site-header" id="home">
+        <nav class="navbar container">
 
-      <div class="nav-links" id="nav-links">
-        <a class="active" href="#home">HOME</a>
-        <a href="#missions">MISSIONS</a>
-        <a href="#blog">BLOG</a>
-        <a href="#tech">TECH STACK</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
-      </div>
+            <a href="#home" class="brand" aria-label="The Data Journey home">
+                <span class="brand-icon">◉</span>
 
-      <a class="btn btn-outline nav-cta" href="#missions">START THE JOURNEY</a>
-    </nav>
+                <span class="brand-text">
+                    <small>THE</small>
+                    <strong>DATA JOURNEY</strong>
+                </span>
+            </a>
 
-    <div class="hero-content container">
-      <div class="hero-copy">
-        <p class="eyebrow">DATA ANALYTICS PORTFOLIO</p>
-        <h1>THE<br><span>DATA</span><br>JOURNEY</h1>
-        <p class="tagline">Every dataset tells a story.<br>Every insight shapes the future.</p>
-        <a class="btn btn-primary" href="#missions">START THE JOURNEY <span>→</span></a>
-      </div>
-    </div>
-  </header>
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-  <main>
-    <section class="intro-section" id="about">
-      <div class="container intro-grid">
-        <article class="welcome-card">
-          <h2>Welcome, Explorer.</h2>
-          <p>You have entered <strong>The Data Journey</strong>.</p>
-          <p>This is not just another Data Analytics portfolio.</p>
-          <p>It is a collection of real-world missions solved through data.</p>
-          <a href="#missions" class="scroll-link">SCROLL TO EXPLORE <span>↓</span></a>
-        </article>
-
-        <article class="process-card">
-          <h2>Every mission follows the same process:</h2>
-          <div class="process-line">
-            <div class="process-step">
-              <span class="icon-circle">⌕</span>
-              <p>Identify<br>the problem</p>
+            <div class="navigation" id="navigation">
+                <a href="#home">Home</a>
+                <a href="#missions">Missions</a>
+                <a href="#process">Process</a>
+                <a href="#tech-stack">Tech Stack</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="connector"></div>
-            <div class="process-step">
-              <span class="icon-circle">▱</span>
-              <p>Collect<br>the data</p>
-            </div>
-            <div class="connector"></div>
-            <div class="process-step">
-              <span class="icon-circle">⌁</span>
-              <p>Clean<br>the data</p>
-            </div>
-            <div class="connector"></div>
-            <div class="process-step">
-              <span class="icon-circle">▥</span>
-              <p>Analyze<br>the data</p>
-            </div>
-            <div class="connector"></div>
-            <div class="process-step">
-              <span class="icon-circle">↗</span>
-              <p>Visualize<br>the data</p>
-            </div>
-            <div class="connector"></div>
-            <div class="process-step">
-              <span class="icon-circle">♢</span>
-              <p>Generate<br>insights</p>
-            </div>
-            <div class="connector"></div>
-            <div class="process-step">
-              <span class="icon-circle">➤</span>
-              <p>Recommend<br>actions</p>
-            </div>
-          </div>
-        </article>
-      </div>
 
-      <div class="container feature-bar">
-        <div class="feature"><span>◎</span><p>Real-World<br>Business Cases</p></div>
-        <div class="feature"><span>◉</span><p>Actionable<br>Insights</p></div>
-        <div class="feature"><span>▥</span><p>Interactive<br>Dashboards</p></div>
-        <div class="feature"><span>▤</span><p>Data Storytelling</p></div>
-        <div class="feature"><span>◌</span><p>AI-Powered<br>Visuals</p></div>
-      </div>
-    </section>
+            <a href="#missions" class="button button-small desktop-button">
+                Start the Journey
+            </a>
 
-    <section class="missions-section" id="missions">
-      <div class="container">
-        <p class="section-label">MISSION CONTROL</p>
-        <h2 class="section-title">Current Missions</h2>
-        <div class="mission-grid">
-          <article class="mission-card">
-            <span class="status in-progress">IN PROGRESS</span>
-            <p class="mission-number">MISSION 001</p>
-            <h3>Sales Intelligence</h3>
-            <p>Analyze sales performance, identify trends, and reveal growth opportunities.</p>
-            <div class="chips"><span>Excel</span><span>Power BI</span></div>
-          </article>
-          <article class="mission-card">
-            <span class="status planned">PLANNED</span>
-            <p class="mission-number">MISSION 002</p>
-            <h3>Automotive Analytics</h3>
-            <p>Study product demand, profitability, and opportunities in the automotive market.</p>
-            <div class="chips"><span>SQL</span><span>Power BI</span></div>
-          </article>
-          <article class="mission-card">
-            <span class="status planned">PLANNED</span>
-            <p class="mission-number">MISSION 003</p>
-            <h3>Global Cost of Living</h3>
-            <p>Compare salaries, expenses, and purchasing power across countries.</p>
-            <div class="chips"><span>Python</span><span>Power BI</span></div>
-          </article>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero section -->
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content container">
+
+                <div class="hero-copy">
+
+                    <span class="system-label">
+                        Mission Control · Online
+                    </span>
+
+                    <p class="hero-eyebrow">
+                        Data Analytics Portfolio
+                    </p>
+
+                    <h1>
+                        <span>The</span>
+                        <strong>Data</strong>
+                        <span>Journey</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Every dataset tells a story.
+                        Every insight shapes the future.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#missions" class="button button-primary">
+                            Start the Journey
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#process" class="button button-secondary">
+                            Explore the Process
+                        </a>
+
+                    </div>
+
+                    <div class="hero-status">
+
+                        <div>
+                            <span class="status-dot"></span>
+                            Portfolio system online
+                        </div>
+
+                        <div>
+                            Mission 001 in progress
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="#welcome" class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <span class="scroll-arrow">↓</span>
+            </a>
+
+        </section>
+
+        <!-- Welcome -->
+        <section class="section welcome-section" id="welcome">
+
+            <div class="container welcome-layout">
+
+                <article class="welcome-copy reveal">
+
+                    <span class="section-number">01</span>
+
+                    <p class="section-eyebrow">
+                        Welcome, Explorer
+                    </p>
+
+                    <h2>
+                        Real-world challenges solved through data.
+                    </h2>
+
+                    <p>
+                        You have entered <strong>The Data Journey</strong>.
+                        This is not just another Data Analytics portfolio.
+                    </p>
+
+                    <p>
+                        It is a collection of real-world missions that demonstrate
+                        how raw data can be transformed into useful information,
+                        clear visualizations and evidence-based decisions.
+                    </p>
+
+                    <a href="#process" class="text-link">
+                        Discover the methodology
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+                <aside class="orion-panel reveal">
+
+                    <div class="panel-header">
+                        <span>ORION · SYSTEM MESSAGE</span>
+                        <span class="online-label">ONLINE</span>
+                    </div>
+
+                    <div class="orion-core">
+                        <div class="core-ring ring-one"></div>
+                        <div class="core-ring ring-two"></div>
+                        <div class="core-center">O</div>
+                    </div>
+
+                    <p id="orionMessage">
+                        Welcome, Explorer. Mission Control is ready.
+                    </p>
+
+                    <div class="system-lines">
+                        <span>Portfolio initialization</span>
+                        <strong>Complete</strong>
+                    </div>
+
+                    <div class="system-lines">
+                        <span>Data missions</span>
+                        <strong>Loading</strong>
+                    </div>
+
+                    <div class="system-lines">
+                        <span>Explorer status</span>
+                        <strong>Active</strong>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+        <!-- Process -->
+        <section class="section process-section" id="process">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span class="section-number">02</span>
+
+                        <p class="section-eyebrow">
+                            Analytics Framework
+                        </p>
+
+                        <h2>
+                            Every mission follows the same process.
+                        </h2>
+                    </div>
+
+                    <p>
+                        Each project documents the full analytical journey,
+                        from defining the problem to recommending actions.
+                    </p>
+
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-card reveal">
+                        <span class="process-icon">⌕</span>
+                        <span class="process-step">Step 01</span>
+                        <h3>Identify</h3>
+                        <p>Define the business problem and the questions that must be answered.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span class="process-icon">▣</span>
+                        <span class="process-step">Step 02</span>
+                        <h3>Collect</h3>
+                        <p>Find relevant, reliable and appropriate sources of information.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span class="process-icon">✦</span>
+                        <span class="process-step">Step 03</span>
+                        <h3>Clean</h3>
+                        <p>Correct errors, duplicates, formats and missing values.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span class="process-icon">▥</span>
+                        <span class="process-step">Step 04</span>
+                        <h3>Analyze</h3>
+                        <p>Explore patterns, relationships, trends and performance indicators.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span class="process-icon">↗</span>
+                        <span class="process-step">Step 05</span>
+                        <h3>Visualize</h3>
+                        <p>Create dashboards and visualizations that communicate clearly.</p>
+                    </article>
+
+                    <article class="process-card reveal">
+                        <span class="process-icon">◇</span>
+                        <span class="process-step">Step 06</span>
+                        <h3>Recommend</h3>
+                        <p>Translate findings into practical and evidence-based actions.</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Missions preview -->
+        <section class="section missions-section" id="missions">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span class="section-number">03</span>
+
+                        <p class="section-eyebrow">
+                            Mission Archive
+                        </p>
+
+                        <h2>
+                            Current data missions.
+                        </h2>
+                    </div>
+
+                    <p>
+                        Projects will be added as I advance through my Data Analytics training.
+                    </p>
+
+                </div>
+
+                <div class="missions-grid">
+
+                    <article class="mission-card mission-active reveal">
+
+                        <div class="mission-top">
+                            <span>Mission 001</span>
+                            <span class="mission-status active">Active</span>
+                        </div>
+
+                        <div class="mission-symbol">01</div>
+
+                        <p class="mission-category">
+                            Business Intelligence
+                        </p>
+
+                        <h3>Sales Intelligence</h3>
+
+                        <p>
+                            Analyze sales performance, identify trends and discover
+                            opportunities for business growth.
+                        </p>
+
+                        <div class="mission-tools">
+                            <span>Excel</span>
+                            <span>Power BI</span>
+                            <span>Data Cleaning</span>
+                        </div>
+
+                        <button class="mission-button" type="button">
+                            Mission in progress
+                        </button>
+
+                    </article>
+
+                    <article class="mission-card reveal">
+
+                        <div class="mission-top">
+                            <span>Mission 002</span>
+                            <span class="mission-status planned">Planned</span>
+                        </div>
+
+                        <div class="mission-symbol">02</div>
+
+                        <p class="mission-category">
+                            Automotive Analytics
+                        </p>
+
+                        <h3>Automotive Market Intelligence</h3>
+
+                        <p>
+                            Study automotive products, customer demand, profitability
+                            and commercial opportunities.
+                        </p>
+
+                        <div class="mission-tools">
+                            <span>SQL</span>
+                            <span>Power BI</span>
+                            <span>Business Analysis</span>
+                        </div>
+
+                        <button class="mission-button" type="button" disabled>
+                            Classified
+                        </button>
+
+                    </article>
+
+                    <article class="mission-card reveal">
+
+                        <div class="mission-top">
+                            <span>Mission 003</span>
+                            <span class="mission-status planned">Planned</span>
+                        </div>
+
+                        <div class="mission-symbol">03</div>
+
+                        <p class="mission-category">
+                            Global Analytics
+                        </p>
+
+                        <h3>Cost of Living Intelligence</h3>
+
+                        <p>
+                            Compare salaries, expenses and purchasing power across
+                            countries and cities.
+                        </p>
+
+                        <div class="mission-tools">
+                            <span>Python</span>
+                            <span>Excel</span>
+                            <span>Visualization</span>
+                        </div>
+
+                        <button class="mission-button" type="button" disabled>
+                            Classified
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Tech stack -->
+        <section class="section tech-section" id="tech-stack">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span class="section-number">04</span>
+
+                        <p class="section-eyebrow">
+                            Technology Systems
+                        </p>
+
+                        <h2>
+                            Tools powering the journey.
+                        </h2>
+                    </div>
+
+                </div>
+
+                <div class="tech-grid">
+
+                    <div class="tech-item reveal">
+                        <span>Excel</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-level="70"></div>
+                        </div>
+                        <small>Developing</small>
+                    </div>
+
+                    <div class="tech-item reveal">
+                        <span>Power BI</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-level="55"></div>
+                        </div>
+                        <small>Developing</small>
+                    </div>
+
+                    <div class="tech-item reveal">
+                        <span>SQL</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-level="35"></div>
+                        </div>
+                        <small>Learning</small>
+                    </div>
+
+                    <div class="tech-item reveal">
+                        <span>Python</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-level="30"></div>
+                        </div>
+                        <small>Learning</small>
+                    </div>
+
+                    <div class="tech-item reveal">
+                        <span>GitHub</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-level="45"></div>
+                        </div>
+                        <small>Learning</small>
+                    </div>
+
+                    <div class="tech-item reveal">
+                        <span>Data Storytelling</span>
+                        <div class="skill-track">
+                            <div class="skill-progress" data-level="50"></div>
+                        </div>
+                        <small>Developing</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About -->
+        <section class="section about-section" id="about">
+
+            <div class="container about-layout">
+
+                <div class="about-visual reveal">
+                    <span class="about-code">JM</span>
+                    <div class="about-ring"></div>
+                </div>
+
+                <article class="about-copy reveal">
+
+                    <span class="section-number">05</span>
+
+                    <p class="section-eyebrow">
+                        Explorer Profile
+                    </p>
+
+                    <h2>Jhony Alexander Meza Garzón</h2>
+
+                    <p class="about-role">
+                        Aspiring Data Analyst · Systems Engineering Student
+                    </p>
+
+                    <p>
+                        I am building practical skills in data cleaning,
+                        business analysis, visualization and decision-making
+                        through real-world portfolio projects.
+                    </p>
+
+                    <p>
+                        My objective is to transform complex information into
+                        useful insights that businesses can understand and apply.
+                    </p>
+
+                    <div class="about-tags">
+                        <span>Business Analytics</span>
+                        <span>Automotive Data</span>
+                        <span>Artificial Intelligence</span>
+                        <span>Data Visualization</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact-section" id="contact">
+
+            <div class="container contact-card reveal">
+
+                <p class="section-eyebrow">
+                    Final Transmission
+                </p>
+
+                <h2>Ready for the next mission?</h2>
+
+                <p>
+                    The portfolio is currently under construction.
+                    New projects, dashboards and case studies will be added continuously.
+                </p>
+
+                <a
+                    href="https://github.com/jhony9811"
+                    class="button button-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View GitHub Profile
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>The Data Journey</strong>
+                <p>Turning raw data into meaningful decisions.</p>
+            </div>
+
+            <div class="footer-status">
+                <span class="status-dot"></span>
+                Mission Control Online
+            </div>
+
+            <p>
+                © <span id="currentYear"></span>
+                Jhony Alexander Meza Garzón
+            </p>
+
         </div>
-      </div>
-    </section>
 
-    <section class="tech-section" id="tech">
-      <div class="container">
-        <p class="section-label">DATA LAB</p>
-        <h2 class="section-title">Tech Stack</h2>
-        <div class="tech-grid">
-          <span>SQL</span><span>Python</span><span>Power BI</span><span>Excel</span><span>GitHub</span><span>AI</span>
-        </div>
-      </div>
-    </section>
+    </footer>
 
-    <section class="blog-section" id="blog">
-      <div class="container two-column">
-        <div>
-          <p class="section-label">FIELD NOTES</p>
-          <h2 class="section-title">Data Logbook</h2>
-        </div>
-        <div class="logbook-card">
-          <h3>What I Learned Building My First Dashboard</h3>
-          <p>Notes about data cleaning, visual hierarchy, storytelling, and business-focused insights.</p>
-          <a href="#">READ ENTRY →</a>
-        </div>
-      </div>
-    </section>
-  </main>
+    <script src="script.js"></script>
 
-  <footer id="contact">
-    <div class="container footer-inner">
-      <div>
-        <strong>THE DATA JOURNEY</strong>
-        <p>Turning raw data into meaningful decisions.</p>
-      </div>
-      <a class="btn btn-outline" href="mailto:your-email@example.com">CONTACT ME</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
