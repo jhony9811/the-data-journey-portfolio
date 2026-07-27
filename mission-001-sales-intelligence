@@ -1,34 +1,24 @@
-# Mission 001 — Sales Intelligence
-
-## Project overview
-
-This project analyzes the sales performance of NovaTech Distribution, a fictional technology distribution company operating in the United States, Canada and Mexico.
-
-## Business objective
-
-Transform transactional sales data into useful indicators, visualizations and business recommendations.
-
-## Project stages
-
-1. Business problem definition
-2. Dataset generation
-3. Data cleaning
-4. Exploratory analysis
-5. Power BI dashboard
-6. SQL analysis
-7. Findings and recommendations
-
-## Tools
-
-- Microsoft Excel
-- Power Query
-- Power BI
-- SQL
-- GitHub
-- HTML
-- CSS
-- JavaScript
-
-## Project status
-
-In progress.
+mission-001-sales-intelligence/
+│
+├── data/
+│   ├── raw/
+│   │   └── novatech_sales_raw.xlsx
+│   │
+│   └── cleaned/
+│       └── novatech_sales_clean.xlsx
+│
+├── documentation/
+│   ├── business_problem.md
+│   ├── data_dictionary.md
+│   └── cleaning_process.md
+│
+├── sql/
+│   └── sales_analysis.sql
+│
+├── powerbi/
+│   └── novatech_sales_dashboard.pbix
+│
+├── images/
+│   └── dashboard-preview.png
+│
+└── README.md
