@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (loaderPercentage) {
-            loaderPercentage.textContent = `${loadingProgress}%`;
+           loaderPercentage.textContent = String(loadingProgress);
         }
 
         if (loaderMessage) {
